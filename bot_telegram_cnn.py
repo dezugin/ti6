@@ -17,9 +17,10 @@ from torchvision import transforms
 from PIL import Image
 from subprocess import Popen, PIPE
 
-#paralelizador do codigo
+#paralelizador do codigo via openmp
 torch.set_num_threads(3)
 
+#paralelizador do codigo via cuda
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 device
 
